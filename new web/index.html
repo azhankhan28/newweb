@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="shortcut icon" href="img/logo.avif" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="bootstrap.js"></script>
+    <style>
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .product-image {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.avif" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="limited.html">Limited Addition</a></li>
+                          <li><a class="dropdown-item" href="sale.html">Sales</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="new eddition.html">New Eddition</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-cart-fill"></i> Cart (0)
+                        </a>
+                    </li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                      </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Our Online Store</h1>
+            <p class="lead">Discover amazing products at great prices!</p>
+        </div>
+    </section>
+    
+    <br>
+
+
+<center>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 500px;">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/s.1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/s.2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/s.3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/s.4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/s.5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/s.6.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </center>
+      
+      <br>
+      <br>
+      <br>
+
+
+    <!-- Product Grid -->
+    <section class="products py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/acc.1.jpg" alt="Product 1" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Gaming Chair</h5>
+                        <p class="product-price">Gaming Chair, Black Ergonomic Computer Chair for Adults, Big and Tall Gamer Chair with Memory Foam Headrest, 4D Adjustable Armrests, Fabric Reclining High-Back for Home Office and Gaming $3,469
+                        </p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/acc.2.jpg" alt="Product 2" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Gaming Headset</h5>
+                        <p class="product-price">BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller, Noise Cancelling Over Ear Headphones with Mic, LED Light, Bass Surround, Soft Memory Earmuffs (Blue) $4,899</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/acc.3.jpg" alt="Product 3" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Gaming Keyboard</h5>
+                        <p class="product-price">Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard, Programmable Backlit Gaming Mouse, Value Combo Set [New Version] 46,251</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/acc.4.jpg" alt="Product 4" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">PGaming Mouse</h5>
+                        <p class="product-price">Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11 Programmable Buttons, On-Board Memory, PC / Mac $3,166</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/gam.1.jpg" alt="Product 5" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Gaming PC</h5>
+                        <p class="product-price">Gaming PC equipped with powerful processors, ample random-access memory (RAM), high-capacity storage, and dedicated graphics cards to support resource-intensive games $18,328</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/gam.2.jpg" alt="Product 1" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">GAMING SETUP</h5>
+                        <p class="product-price">BENGOO G9000 Stereo Gaming LED Light, Bass Surround, Soft Memory Earmuffs (Blue) 4.3 out of 5 stars $10,328</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/gam.3.jpg" alt="Product 2" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">PS5 CONTROLLER</h5>
+                        <p class="product-price">PS5 controller manages or directs the flow of data between two entities with game CD $3,499</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/gam.4.jpg" alt="Product 3" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">TOY</h5>
+                        <p class="product-price">SPIDER MAN toy made from a skin-tight fabric, most likely Spandex or something similar.The costume blue with red gloves, boots, mid-section, and mask. toy $32</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/men.1.jpg" alt="Product 4" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Winter Cap</h5>
+                        <p class="product-price">Carhartt Men's Knit Cuffed Beanie $97
+                        </p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/men.2.jpg" alt="Product 5" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Hoody</h5>
+                        <p class="product-price">Hanes EcoSmart Fleece, Cotton-Blend Pullover, Crewneck Sweatshirt for Men $41.84</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/men.3.jpg" alt="Product 6" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Sneekers</h5>
+                        <p class="product-price">Pujcs Mens Walking Shoes Non Slip Running Shoes Breathable Slip on Sneakers Lightwight Gym Tennis Shoes for Men $80.67</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/men.4.jpg" alt="Product 1" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Mens Jacket</h5>
+                        <p class="product-price">wantdo Men's Winter Jacket Thicken Winter Coat Warm Puffer Jacket with Faux Fur Hood $78.98</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/sp.1.jpg" alt="Product 2" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Dumbbells</h5>
+                        <p class="product-price">Bowflex SelectTech 552 Adjustable Dumbbells Adjustable dumbbells have a retaining mechanism.The weights are removable on the end, unlike on a fixed set where weights are attached to the handle $399</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/sp.2.jpg" alt="Product 3" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Jumping Roop</h5>
+                        <p class="product-price">Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women, Men, and Kids, Adjustable Steel Jump Rope Workout with Foam Handles for Fitness, Home Exercise & Slim Body $8.84</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/sp.3.jpg" alt="Product 4" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Resistance Bands</h5>
+                        <p class="product-price">Resistance Bands, Pull Up Assist Bands - Workout Bands, Eexercise Bands, Long Resistance Bands Set for Working Out, Fitness, Training, Physical Therapy for Men Women $29.67
+                        </p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/sp.4.jpg" alt="Product 5" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Push Up Board</h5>
+                        <p class="product-price">Push Up Board,Home Gym,Portable Exercise Equipment,Pilates Bar and 20 Fitness Accessories with Resistance Bands and Ab Roller Wheel,Full Body Workout at Home $38.98</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/wm.1.jfif" alt="Product 6" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Mens Watch</h5>
+                        <p class="product-price">OLEVS Men's Stainless Steel Chronograph Watch,Big Face Silver Black Tone Easy to Read Analog Quartz Watch, Luxury Waterproof Date Diamond Roman Arabic Numerals Dial Dress Watch for Men $40.78</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/ww.2.jfif" alt="Product 6" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Womens Watch</h5>
+                        <p class="product-price">Anne Klein Women's Resin Bracelet Watch A watch is a portable timepiece that is designed to be worn on the wrist or carried in the pocket. The movement of a watch is driven either by a spring or by electricity $19.14
+                        </p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/wg.3.jfif" alt="Product 6" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Girls watch</h5>
+                        <p class="product-price">Smart Watch, HD Smartwatch for Men Women (Answer/Make Calls), Fitness Watch with 100+ Sport Modes, IP68 Waterproof/Heart Rate/Sleep Monitor, Activity Trackers for iOS/Android $19
+                        </p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/wb.4.jfif" alt="Product 6" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Boys Watch</h5>
+                        <p class="product-price">L LAVAREDO Mens Digital Watch Sports Military Watches Waterproof Outdoor Chronograph Wrist Watches for Men with LED Back Ligh/Alarm/Date $22
+                        </p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card text-center text-bg-dark">
+                        <img src="img/s.5.jpg" alt="Product 6" class="product-image img-fluid mb-3">
+                        <h5 class="product-title">Samsung s25 Ultra</h5>
+                        <p class="product-price">C24 Ultra 5G Smartphone,6+256GB Unlocked Phone, Android 13.0，48+108MP Zoom Camera,6.8" HD+ Display, Long Battery Life 6800mAh,Dual SIM 5G Cell Phone, Dual SIM,Build-in Pen Phone $8,999</p>
+                        <a href="cart.html"><button class="btn btn-primary">Add to Cart</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <center>
+        <button class=" btn text-btn-light btn-outline-primary btn-lg ">View all</button>
+      </center>
+      
+      <br>
+      <br>
+
+
+
+
+    <footer class="bg-dark text-white pt-5 pb-3 text-center">
+        <a href="#"><button class="btn btn-dark btn-outline-secondary">Back to Top</button></a>
+        <div class="container pt-5">
+            <div class="row">
+                <!-- About Us Section -->
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We are a leading company in providing the best solutions for your needs. Our mission is to deliver high-quality services and maintain strong customer relationships.</p>
+                </div>
+      
+                <!-- Quick Links Section -->
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Services</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Contact Section -->
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-house-door"></i> 1234 Street Name, City, Country</li>
+                        <li><i class="bi bi-phone"></i> +1 234 567 890</li>
+                        <li><i class="bi bi-envelope"></i> email@company.com</li>
+                    </ul>
+                </div>
+      
+                <!-- Social Media Section -->
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Facebook</a></li>
+                        <li><a href="#" class="footer-link">Twitter</a></li>
+                        <li><a href="#" class="footer-link">Instagram</a></li>
+                        <li><a href="#" class="footer-link">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+      
+            <!-- Bottom Copyright Section -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">© 2025 Your Company. All rights reserved.</p>
+                    <p><a href="#" class="footer-link">Privacy Policy</a> <a href="#" class="footer-link">Terms of Service</a></p>
+                </div>
+            </div>
+        </div>
+      </footer>
+
+   
+</body>
+
+</html>

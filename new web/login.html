@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.avif" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="bootstrap.js"></script>
+    <title>LOGIN</title>
+</head>
+<body>
+
+
+    <style>
+        /* Background color and height for the whole page */
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+
+        /* Flexbox for centering the form */
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Form Container Styles */
+        .login-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            transform: translateY(50px);
+            animation: slideUp 0.5s ease-out forwards;
+        }
+
+        /* Animation: Slide up when page loads */
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Input field styles */
+        .form-control {
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: none;
+        }
+
+        /* Button styles */
+        .btn-login {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for login button */
+        .btn-login:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animation for form inputs */
+        .form-control:focus {
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            border-color: #007bff;
+        }
+
+        /* Remember me section */
+        .remember-me {
+            font-size: 14px;
+        }
+
+        /* Animation on page load */
+        .animate__animated {
+            animation: fadeIn 1s;
+        }
+
+        /* FadeIn Effect */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Centering the form container */
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Form Container Styles */
+        .auth-form-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        /* Fade in up animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Tabs navigation style */
+        .nav-pills .nav-link {
+            border-radius: 30px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Form inputs animation */
+        .form-control {
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInInput 0.8s ease-out forwards;
+        }
+
+        /* Input fields focus animation */
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Input fields fade-in animation */
+        @keyframes fadeInInput {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button animation */
+        .btn-custom {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeInButton 1s ease-out forwards;
+        }
+
+        /* Button hover effect */
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+        /* Button fade-in animation */
+        @keyframes fadeInButton {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* For remember me section */
+        .remember-me {
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="auth-form-container">
+        <!-- Tabs for switching between login and signup -->
+        <ul class="nav nav-pills mb-3" id="authTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="login-tab" data-bs-toggle="pill" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="signup-tab" data-bs-toggle="pill" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a>
+            </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content" id="authTabContent">
+            <!-- Login Form -->
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                <h3 class="text-center mb-4">Login</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="login-email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="login-email" placeholder="Enter email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="login-password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-custom mt-3">Login</button>
+                    <div class="mt-2 text-center">
+                        <a href="#" class="text-primary">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                <h3 class="text-center mb-4">Sign Up</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="signup-name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="signup-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="signup-email" placeholder="Enter email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="signup-password" placeholder="Enter password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" required>
+                    </div>
+                    <button type="submit" class="btn btn-custom mt-3">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <footer class="bg-dark text-white pt-5 pb-3 text-center">
+        <a href="#"><button class="btn btn-dark btn-outline-secondary">Back to Top</button></a>
+        <div class="container pt-5">
+            <div class="row">
+                <!-- About Us Section -->
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>We are a leading company in providing the best solutions for your needs. Our mission is to deliver high-quality services and maintain strong customer relationships.</p>
+                </div>
+      
+                <!-- Quick Links Section -->
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Services</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Contact Section -->
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-house-door"></i> 1234 Street Name, City, Country</li>
+                        <li><i class="bi bi-phone"></i> +1 234 567 890</li>
+                        <li><i class="bi bi-envelope"></i> email@company.com</li>
+                    </ul>
+                </div>
+      
+                <!-- Social Media Section -->
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Facebook</a></li>
+                        <li><a href="#" class="footer-link">Twitter</a></li>
+                        <li><a href="#" class="footer-link">Instagram</a></li>
+                        <li><a href="#" class="footer-link">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+      
+            <!-- Bottom Copyright Section -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">© 2025 Your Company. All rights reserved.</p>
+                    <p><a href="#" class="footer-link">Privacy Policy</a> <a href="#" class="footer-link">Terms of Service</a></p>
+                </div>
+            </div>
+        </div>
+      </footer>
+
+
+
+
+    
+</body>
+</html>
